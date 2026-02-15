@@ -10,5 +10,21 @@
     <button onclick="console.log(1)">Click 1</button>
     <button onclick="console.log(2)">Click 2</button>
     <button onclick="console.log('Hello, JS Events')">Click 3</button>
+    <br><br>
+    <button onclick="makeRed()">Make Red</button>
+    <button onclick="makeYellow()">Make Yellow</button>
+    <button onclick="makePurple()">Make Purple</button>
+
+    <script>
+        function makeRed() {
+            document.body.style.backgroundColor = 'red';
+        }
+        function makeYellow() {
+            document.body.style.backgroundColor = 'yellow';
+        }
+        function makePurple() {
+            document.body.style.backgroundColor = 'purple';
+        }
+    </script>
 </body>
 </html>
