@@ -20,3 +20,10 @@ btnMakeViolet.onclick = makeViolet;
 function makeViolet() {
     document.body.style.backgroundColor = 'violet';
 }
+
+// addEventListener
+
+document.getElementById('btn-make-gold')
+  .addEventListener('click', function () {
+    document.body.style.backgroundColor = 'goldenrod';
+  })
