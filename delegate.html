@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegate</title>
+</head>
+<body>
+    <h1>Explore The Concept Of Event Delegate...</h1>
+    <section id="container">
+        <h3>List of fruits</h3>
+        <ol id="fruit-list">
+            <li class="item">Fruit - 1</li>
+            <li class="item">Fruit - 2</li>
+            <li class="item">Fruit - 3</li>
+            <li class="item">Fruit - 4</li>
+            <li class="item">Fruit - 5</li>
+        </ol>
+        <button id="btn-add">Add</button>
+    </section>
+
+    <script>
+        document.getElementById('fruit-list')
+            .addEventListener('click', function(event){
+                event.target.parentNode.removeChild(event.target);
+            })
+
+        // add item
+        document.getElementById('btn-add')
+            .addEventListener('click', function(){
+                const li = document.createElement('li');
+                li.innerText = "New Fruit";
+                const ol = document.getElementById('fruit-list');
+                ol.appendChild(li);
+            })
+    </script>
+</body>
+</html>
